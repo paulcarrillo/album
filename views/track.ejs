@@ -1,0 +1,20 @@
+<% if (complete == 'true') { %>
+  <% var checked = "checked='true'" %>
+  <% var klass = 'checked' %>
+<% } else { %>
+  <% var checked = '' %>
+  <% var klass = '' %>
+<% } %>
+
+<div class="row">
+  <div>
+    <span class='<%= klass %> title' data-id='<%= id %>' ><%= title %></span>
+  </div>
+  <div>
+    <input type="checkbox" id='<%= id %>' <%= checked %> />
+    <label for='<%= id %>'>Listened to</label>
+  </div>
+  <div>
+    <button class="remove-track" data-id='<%= id %>'>Delete</button>
+  </div>
+</div>
